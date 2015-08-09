@@ -1,0 +1,45 @@
+- model_class = Consumer
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human
+
+%p
+  %strong= model_class.human_attribute_name(:priority) + ':'
+  %br
+  = @consumer.priority
+%p
+  %strong= model_class.human_attribute_name(:actor_id) + ':'
+  %br
+  = @consumer.actor_id
+%p
+  %strong= model_class.human_attribute_name(:name) + ':'
+  %br
+  = @consumer.name
+%p
+  %strong= model_class.human_attribute_name(:address) + ':'
+  %br
+  = @consumer.address
+%p
+  %strong= model_class.human_attribute_name(:enabled) + ':'
+  %br
+  = @consumer.enabled
+%p
+  %strong= model_class.human_attribute_name(:active) + ':'
+  %br
+  = @consumer.active
+%p
+  %strong= model_class.human_attribute_name(:power) + ':'
+  %br
+  = @consumer.power
+%p
+  %strong= model_class.human_attribute_name(:switch_interval) + ':'
+  %br
+  = @consumer.switch_interval
+%p
+  %strong= model_class.human_attribute_name(:switched_at) + ':'
+  %br
+  = @consumer.switched_at
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), consumers_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_consumer_path(@consumer), :class => 'btn btn-primary'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), consumer_path(@consumer), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

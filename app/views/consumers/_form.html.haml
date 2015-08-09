@@ -1,0 +1,31 @@
+= form_for @consumer do |f|
+  .form-group
+    = f.label :priority, :class => 'control-label'
+    = f.number_field :priority, :class => 'form-control'
+  .form-group
+    = f.label :actor_id, :class => 'control-label'
+    = f.number_field :actor_id, :class => 'form-control'
+  .form-group
+    = f.label :name, :class => 'control-label'
+    = f.text_field :name, :class => 'form-control'
+  .form-group
+    = f.label :address, :class => 'control-label'
+    = f.text_field :address, :class => 'form-control'
+  .form-group
+    = f.label :enabled, :class => 'control-label'
+    = f.check_box :enabled, :class => 'form-control'
+  .form-group
+    = f.label :active, :class => 'control-label'
+    = f.check_box :active, :class => 'form-control'
+  .form-group
+    = f.label :power, :class => 'control-label'
+    = f.number_field :power, :class => 'form-control'
+  .form-group
+    = f.label :switch_interval, :class => 'control-label'
+    = f.number_field :switch_interval, :class => 'form-control'
+  .form-group
+    = f.label :switched_at, :class => 'control-label'
+    = f.datetime_select :switched_at, :class => 'form-control'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), consumers_path, :class => 'btn'
