@@ -1,0 +1,20 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.2.3'
+gem 'pg'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
+gem 'therubyracer'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder'
+gem 'bcrypt'
+gem 'puma'
+gem 'paper_trail'
+gem 'haml-rails'
+gem 'twitter-bootswatch-rails', '~> 3.3.4'
+gem 'twitter-bootswatch-rails-helpers'
+
+gem 'pry-rails'
+
